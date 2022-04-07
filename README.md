@@ -14,3 +14,6 @@ This repo is used for building Data Structures and algorithms from scratch
 
 - **DS1-StackAndQueue**
     + Stack (1/4/2022)
+
+- **DS2-LinkedList**
+    + Linked List (7/4/2022)
