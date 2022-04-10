@@ -1,8 +1,7 @@
-// package DS1_StackAndQueue;
+package DS1_StackAndQueue;
 
-
-class EmptyStackException extends Exception{
-    public EmptyStackException(String message){
+class StackException extends Exception{
+    public StackException(String message){
         super(message);
     }
 }

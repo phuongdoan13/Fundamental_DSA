@@ -1,43 +1,37 @@
-// package DS1_StackAndQueue;
+package DS1_StackAndQueue;
 import java.util.*;
 
 public class Stack{
-    int size;
-
     LinkedList<Integer> st;
 
-
     public Stack(){
-        this.st = new LinkedList();
+        this.st = new LinkedList<Integer>();
     }
+
     public boolean isEmpty(){
-        return this.size == 0;
+        // O(1)
+        return this.st.isEmpty();
     }
 
     public void push(int data){
+        // O(1)
         st.push(data);
-        size++;
     } 
 
-    public int pop() throws EmptyStackException{
-        if(size == 0){
-            throw new EmptyStackException("The stack is empty.");
+    public int pop() throws StackException{
+        // O(1)
+        if(st.isEmpty()){
+            throw new StackException("The stack is empty.");
         }
-        int val = st.getLast();
+        int val = st.peekLast();
         st.removeLast();
         return val;
     }
 
-    public int peek() throws EmptyStackException{
-        if(size == 0){
-            throw new EmptyStackException("The stack is empty.");
+    public int peek() throws StackException{
+        if(st.isEmpty()){
+            throw new StackException("The stack is empty.");
         }
-        return st.getLast();
+        return st.peekLast();
     }
 }
-
-// class EmptyStackException extends Exception{
-//     public EmptyStackException(String message){
-//         super(message);
-//     }
-// }

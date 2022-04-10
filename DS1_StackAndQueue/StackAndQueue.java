@@ -1,4 +1,4 @@
-// package DS1_StackAndQueue;
+package DS1_StackAndQueue;
 
 public class StackAndQueue {
     public static void main(String[] args) {
@@ -14,10 +14,8 @@ public class StackAndQueue {
             st.pop();
             st.pop();
             st.pop();
-        } catch(EmptyStackException e){
-            System.err.println(e);
-            System.out.println("0");
+        } catch(Exception e){
+            e.printStackTrace();
         }
-        System.out.println(1);
     }
 }
