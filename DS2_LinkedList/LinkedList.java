@@ -1,17 +1,6 @@
-class Node{
-    int val;
-    Node next;
-    public Node(int val){
-        this.val = val;
-    }
-    public Node(int val, Node next){
-        this.val = val;
-        this.next = next;
-    }
-}
+package DS2_LinkedList;
 
-
-class MyLinkedList{
+public class LinkedList{
     Node head; // the first node of the list
 
     public void append(int data){
@@ -75,7 +64,7 @@ class MyLinkedList{
         }
     }
     public static void main(String[] args) {
-        MyLinkedList list = new MyLinkedList();
+        LinkedList list = new LinkedList();
         list.append(0);
         list.append(1);
         list.append(2);
@@ -83,5 +72,17 @@ class MyLinkedList{
         list.deleteNode(-9);
         list.deleteNode(1);
         list.printLinkedList();
+    }
+}
+
+class Node{
+    int val;
+    Node next;
+    public Node(int val){
+        this.val = val;
+    }
+    public Node(int val, Node next){
+        this.val = val;
+        this.next = next;
     }
 }
