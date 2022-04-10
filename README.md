@@ -17,3 +17,6 @@ This repo is used for building Data Structures and algorithms from scratch
 
 - **DS2-LinkedList**
     + Linked List (7/4/2022)
+
+- **DS3-Tree**
+    + Tree (10/4/2022)
