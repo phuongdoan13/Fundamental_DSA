@@ -1,4 +1,4 @@
-package A2_GraphTraverse;
+package DS4_Graph;
 
 import java.util.*;
 

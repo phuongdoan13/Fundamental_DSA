@@ -1,5 +1,4 @@
-package A2_GraphTraverse;
-
+package DS4_Graph;
 
 import java.util.*;
 
@@ -43,5 +42,28 @@ class Graph {
     public boolean hasEdge(int src, int dst){
         // Check if an edge exists
         return this.hasNode(src) && this.hasNode(dst) && this.graph.get(src).containsKey(dst);
+    }
+
+    // Algorithm
+    public List<Integer> DFS_iterative(int src){
+        List<Integer> ans = new ArrayList<>();
+        
+        Stack<Integer> st = new Stack();
+        Set<Integer> seen = new HashSet();
+        st.add(src);
+        seen.add(src);
+        
+        while(st.isEmpty()){
+            int pop = st.pop();
+            for(Integer neighbour:this.graph.get(src).keySet()){
+                if(!seen.contains(neighbour)){
+                    seen.add(neighbour);
+                    st.add(neighbour);
+                    ans.add(neighbour);
+                }
+            }
+        }
+        return ans;
+
     }
 }
