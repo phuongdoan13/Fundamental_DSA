@@ -23,3 +23,6 @@ This repo is used for building Data Structures and algorithms from scratch
 
 - **DS4-Graph**
     + Undirected graph (7/4/2022)
+
+- **DS5-Hash**
+    + Hashset (21/4/2022)
