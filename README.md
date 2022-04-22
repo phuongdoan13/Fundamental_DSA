@@ -26,3 +26,4 @@ This repo is used for building Data Structures and algorithms from scratch
 
 - **DS5-Hash**
     + Hashset (21/4/2022)
+    + Hashmap (22/4/2022)
