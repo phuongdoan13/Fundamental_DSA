@@ -1,5 +1,6 @@
 # Fundamental DSA
 
+My weekend project
 
 This repo is used for building Data Structures and algorithms from scratch
 
