@@ -9,6 +9,8 @@ This repo is used for building Data Structures and algorithms from scratch
     + Selection sort (5/3/2022)
     + Bubble sort, v1 and v2 (5/3/2022)
     + Merge sort (6/3/2022)
+    + Quick sort (18/5/2022)
+    + Insertion sort (18/5/2022)
 
 - **A2-Bit Manipulation**
     + Bit manipulation (12/4/2022)
