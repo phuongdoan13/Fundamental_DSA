@@ -1,6 +1,9 @@
 package A2_BitManipulation;
 
+import java.math.BigInteger;
+
 public class BitManipulation {
+    // BASIC
     static boolean getBit(int num, int i){
         // Get the i_th bit (indexed-0 from the right);
         return ((num & (1 << i)) != 0);
@@ -31,11 +34,37 @@ public class BitManipulation {
         int mask = (-1 << (i + 1));// 1111 shift left by 3
         return num & mask;
     }
+
+    static String addBinary(String a, String b){
+        BigInteger x = new BigInteger(a, 2);
+        BigInteger y = new BigInteger(b, 2);
+        BigInteger zero = new BigInteger("0", 2);
+        BigInteger ans; BigInteger carry;
+        while(y.compareTo(zero) != 0){
+            ans = x.xor (y);
+            carry = x.and(y).shiftLeft(1);
+            x = ans;
+            y = carry;
+        }
+        return x.toString(2);
+
+    }
+
+    static int[] countBitsFrom1ToN(int n){
+        // Count the number of bits for each integer from 1 to n
+        int[] dp = new int[n + 1];
+        for(int i = 1; i <= n; i++){
+            if(i % 2 == 0) dp[i] = dp[i/2];
+            else dp[i] = dp[i-1] + 1;
+        }
+        return dp;
+    }
     public static void main(String[] args) {
-        System.out.println(getBit(9, 1));
-        System.out.println(setBit(8, 0));
-        System.out.println(clearBit(15, 2));
-        System.out.println(clearBitsMSBThroughI(15, 3));
-        System.out.println(clearBitsIThrough0(15, 2)); 
+        // System.out.println(getBit(9, 1));
+        // System.out.println(setBit(8, 0));
+        // System.out.println(clearBit(15, 2));
+        // System.out.println(clearBitsMSBThroughI(15, 3));
+        // System.out.println(clearBitsIThrough0(15, 2)); 
+        System.out.println(addBinary("1", "0"));
     }
 }
