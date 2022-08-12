@@ -100,10 +100,10 @@ public class Tree{
         bst.add(0);
         bst.add(3);
         bst.add(100);
-        bst.inorderTraversal(bst.node); System.out.println();
-        bst.delete(3);
-        bst.inorderTraversal(bst.node); System.out.println();
-
+        // bst.inorderTraversal(bst.node); System.out.println();
+        // bst.delete(3);
+        // bst.inorderTraversal(bst.node); System.out.println();
+        bst.lowestCommonAncestor(bst.node.left, bst.node.right);
 
 
         

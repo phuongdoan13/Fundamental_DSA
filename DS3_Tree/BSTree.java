@@ -3,7 +3,7 @@ package DS3_Tree;
 public class BSTree extends Tree{
     public BSTree(int val){
         super(val);
-        
+
     }
     Node search(int val){
         // the node with the VAL;
@@ -19,18 +19,16 @@ public class BSTree extends Tree{
             return node;
         else if(node.val > VAL)
             return searchHelper(node.right, VAL);
-        else 
+        else
             return searchHelper(node.left, VAL);
     }
-
-    
 
     void add(int val){
         // add new val
         // Average case: O(log(n)), Worst case: O(n)
         addHelper(this.node, val);
     }
-    
+
     private Node addHelper(Node node, int VAL){
         // recursive method for adding VAL
         // Average case: O(log(n)), Worst case: O(n)
@@ -43,7 +41,7 @@ public class BSTree extends Tree{
         else if(node.val > VAL)
             node.left = addHelper(node.left, VAL);
         return node;
-            
+
     }
 
     void delete(int val){
@@ -59,7 +57,7 @@ public class BSTree extends Tree{
             return node;
         // find the node
         if(node.val < VAL){
-            node.right = deleteHelper(node.right, VAL); 
+            node.right = deleteHelper(node.right, VAL);
         }else if(node.val > VAL){
             node.left = deleteHelper(node.left, VAL);
         }else{
@@ -87,5 +85,21 @@ public class BSTree extends Tree{
             node = node.left;
         }
         return minv;
+    }
+    
+    Node lowestCommonAncestor(Node p, Node q) {
+        int p_val = p.val;
+        int q_val = q.val;
+        int small_val = Math.min(p_val, q_val);
+        int large_val = Math.max(p_val, q_val);
+        Node curr = this.node;
+        while(curr != null){
+
+            if(curr.val < small_val) curr = curr.right;
+            else if(curr.val > large_val) curr = curr.left;
+            else return curr;
+
+        }
+        return null;
     }
 }
