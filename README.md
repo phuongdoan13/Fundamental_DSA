@@ -14,12 +14,13 @@ This repo is used for building Data Structures and algorithms from scratch
 
 - **A2-Bit Manipulation**
     + Bit manipulation (12/4/2022)
-    
+
 - **DS1-StackAndQueue**
     + Stack (1/4/2022)
 
 - **DS2-LinkedList**
     + Linked List (7/4/2022)
+    + Floyd algorithm (14/8/2022)
 
 - **DS3-Tree**
     + Tree (10/4/2022)
