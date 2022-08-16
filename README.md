@@ -15,6 +15,9 @@ This repo is used for building Data Structures and algorithms from scratch
 - **A2-Bit Manipulation**
     + Bit manipulation (12/4/2022)
 
+- **A3-Backtracking**
+    + subsetsWithDup (16/8/2022)
+
 - **DS1-StackAndQueue**
     + Stack (1/4/2022)
 
