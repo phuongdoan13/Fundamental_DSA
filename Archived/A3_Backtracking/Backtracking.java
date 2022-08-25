@@ -8,7 +8,7 @@ public class Backtracking {
         // O(n * 2^n)
         List<List<Integer>> ans = new ArrayList<>();
         Arrays.sort(nums);
-        backtrack(nums, 0, new ArrayList<Integer>());
+        backtrackSubsetsWithDup(nums, 0, new ArrayList<Integer>(), ans);
         return ans;
     }
 
@@ -18,7 +18,7 @@ public class Backtracking {
         for(int i = idx; i < nums.length; i++){
             int curr_num = nums[i];
             list.add(curr_num);
-            backtrack(nums, i+1, list);
+            backtrackSubsetsWithDup(nums, i+1, list, ans);
             list.remove(list.size() - 1);
 
 
