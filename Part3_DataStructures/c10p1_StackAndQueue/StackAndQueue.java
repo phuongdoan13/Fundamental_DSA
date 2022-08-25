@@ -1,4 +1,4 @@
-package DS1_StackAndQueue;
+package Part3_DataStructures.c10p1_StackAndQueue;
 
 public class StackAndQueue {
     public static void main(String[] args) {

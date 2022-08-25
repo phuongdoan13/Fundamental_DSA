@@ -1,4 +1,4 @@
-package A2_BitManipulation;
+package Archived.A2_BitManipulation;
 
 import java.math.BigInteger;
 

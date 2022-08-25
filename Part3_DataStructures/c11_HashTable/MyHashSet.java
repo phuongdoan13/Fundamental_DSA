@@ -1,4 +1,4 @@
-package DS5_Hash;
+package Part3_DataStructures.c11_HashTable;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package DS1_StackAndQueue;
+package Part3_DataStructures.c10p1_StackAndQueue;
 import java.util.*;
 public class StackByQueue {
     Deque<Integer> q;

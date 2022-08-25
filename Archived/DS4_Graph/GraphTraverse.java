@@ -1,4 +1,4 @@
-package DS4_Graph;
+package Archived.DS4_Graph;
 
 public class GraphTraverse {
     public static void main(String[] args) {

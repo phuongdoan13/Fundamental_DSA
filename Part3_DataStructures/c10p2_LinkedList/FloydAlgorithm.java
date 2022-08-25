@@ -1,4 +1,4 @@
-package DS2_LinkedList;
+package Part3_DataStructures.c10p2_LinkedList;
 
 class FloydAlgorithm{
     public FloydAlgorithm(){

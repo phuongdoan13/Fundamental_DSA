@@ -1,4 +1,4 @@
-package A1_Sorting;
+package Part2_SortingAndOrderStatistics.Sorting;
 import java.util.*;
 
 class Sorting {

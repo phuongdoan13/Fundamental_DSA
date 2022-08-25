@@ -1,4 +1,4 @@
-package DS3_Tree;
+package Archived.DS3_Tree;
 
 public class BSTree extends Tree{
     public BSTree(int val){

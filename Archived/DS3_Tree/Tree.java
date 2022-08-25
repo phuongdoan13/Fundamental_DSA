@@ -1,4 +1,4 @@
-package DS3_Tree;
+package Archived.DS3_Tree;
 class Node {
     int val;
     Node left;

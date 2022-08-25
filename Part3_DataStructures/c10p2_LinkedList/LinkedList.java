@@ -1,4 +1,4 @@
-package DS2_LinkedList;
+package Part3_DataStructures.c10p2_LinkedList;
 
 public class LinkedList{
     Node head; // the first node of the list
