@@ -4,41 +4,41 @@ import java.util.*;
 
 public class MyHashSet {
     private int PRIME = 127;
-    Bucket[] buckets;
+    SetBucket[] setBuckets;
 
     public MyHashSet() {
-        buckets = new Bucket[PRIME];
+        setBuckets = new SetBucket[PRIME];
         for(int i = 0; i < PRIME; i++){
-            this.buckets[i] = new Bucket();
+            this.setBuckets[i] = new SetBucket();
         }
     }
     
     public void add(int key) {
         int hash = key % this.PRIME;
 
-        Bucket bucket = this.buckets[hash];
-        bucket.insertKey(Integer.valueOf(key));
+        SetBucket setBucket = this.setBuckets[hash];
+        setBucket.insertKey(Integer.valueOf(key));
 
     }
     
     public void remove(int key) {
         int hash = key % this.PRIME;
 
-        Bucket bucket = this.buckets[hash];
-        bucket.removesKey(Integer.valueOf(key));
+        SetBucket setBucket = this.setBuckets[hash];
+        setBucket.removesKey(Integer.valueOf(key));
     }
     
     public boolean contains(int key) {
         int hash = key % this.PRIME;
 
-        Bucket bucket = this.buckets[hash];
-        return bucket.containsKey(Integer.valueOf(key));
+        SetBucket setBucket = this.setBuckets[hash];
+        return setBucket.containsKey(Integer.valueOf(key));
     }
 }
 
-class Bucket{
+class SetBucket {
     List<Integer> container;
-    public Bucket(){
+    public SetBucket(){
         this.container = new LinkedList<>();    
     }
 
