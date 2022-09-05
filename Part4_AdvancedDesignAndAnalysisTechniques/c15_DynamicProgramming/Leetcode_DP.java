@@ -41,9 +41,46 @@ public class Leetcode_DP {
         return memo[n];
 
     }
+
+    public int climbStairs(int n) {
+        /* 
+            Q70. Climbing stairs
+            You are climbing a staircase. 
+            It takes n steps to reach the top.
+            Each time you can either climb 1 or 2 steps. 
+            In how many distinct ways can you climb to the top?
+        */
+        // O(n) O(1)
+        if(n<2) return 1;
+        int prev = 1;
+        int prev_prev = 1;
+        int curr = 1;
+        for(int i = 2; i <= n; i++){
+            curr = prev + prev_prev;
+            prev_prev = prev;
+            prev = curr;
+        }
+        return curr;
+    }
+
+    public int minCostClimbingStairs(int[] cost) {
+        /* 
+            Q746. Min Cost Climbing Stairs
+            You are given an integer array cost where cost[i] is the cost of ith step on a staircase. 
+            Once you pay the cost, you can either climb one or two steps.
+            You can either start from the step with index 0, or the step with index 1.
+            Return the minimum cost to reach the top of the floor.
+        */
+        // O(n) O(n)
+        if(cost.length <= 2) return Math.min(cost[0], cost[1]);
+        int[] memo = new int[cost.length + 1];
+        for(int i = 2; i < memo.length; i++){
+            int takeOneStep = memo[i-1] + cost[i-1];
+            int takeTwoSteps = memo[i-2] + cost[i-2];
+            memo[i] = Math.min(takeOneStep, takeTwoSteps);
+        }
+        return memo[memo.length - 1];
+    }
     public static void main(String[] args) {
-        Leetcode_DP inst = new Leetcode_DP();
-        System.out.println(inst.tribonacci(3));
-        System.out.println(inst.fibonacci(3));
     }
 }
