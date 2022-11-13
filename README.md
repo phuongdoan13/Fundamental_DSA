@@ -9,3 +9,4 @@ TBD
 | Data structures | Access | Search | Insertion | Delete |
 |---|---|---|---|---|
 | Array | O(1) | O(n) | O(n) | O(n) |
+| Stack | O(n) | O(n) | O(1) | O(1) |
