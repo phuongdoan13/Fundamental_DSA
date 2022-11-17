@@ -5,3 +5,7 @@ This repo is used for building Data Structures and algorithms from scratch. The 
 ## Table of content
 TBD
 
+## Time complexity
+| Data structures | Access | Search | Insertion | Delete |
+|---|---|---|---|---|
+| Array | O(1) | O(n) | O(n) | O(n) |
