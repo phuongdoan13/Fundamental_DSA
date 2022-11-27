@@ -12,3 +12,4 @@ TBD
 | Stack | O(n) | O(n) | O(1) | O(1) |
 | Queue | O(n) | O(n) | O(1) | O(1) |
 | Linked list | O(n) | O(n) | O(1) | O(1) |
+| HashMap | N/A | O(1) | O(1) | O(1) |
