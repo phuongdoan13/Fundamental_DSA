@@ -105,36 +105,22 @@ inline void OPEN(string s)
   freopen((s + ".out").c_str(), "w", stdout);
 #endif
 }
-void solve(int n)
-{
-  if (n == 1)
-    cout << 1 << endl;
-  else if (n < 4)
-    cout << "NO SOLUTION" << endl;
-  else if (n == 4)
-    cout << "2 4 1 3\n";
-  else
-  {
-    for (int i = 1; i <= n; i += 2)
-      cout << i << " ";
-    for (int i = 2; i <= n; i += 2)
-    {
-      if (i + 2 <= n)
-        cout << i << " ";
-      else
-        cout << i << endl;
-    }
-  }
-}
-int main()
-{
-  ios_base::sync_with_stdio(0);
-  cin.tie(0);
-  cout.tie(0);
-  OPEN("TEST");
-  int n;
-  cin >> n;
+
+const int mxN = 2e5;
+int n , a[mxN], k;
+
+void solve(){
   
-  solve(n);
+}
+
+int main(){
+  ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+  OPEN("TEST");
+  int T;
+  cin >> T;
+  FORN(t,1,T) {
+    cout << "Case #" << t << ": ";
+    solve();
+  };
   return 0;
 }

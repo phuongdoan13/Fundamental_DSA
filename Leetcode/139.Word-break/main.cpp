@@ -1,3 +1,4 @@
+
 #include <bits/stdc++.h>
 
 using namespace std;
@@ -105,36 +106,50 @@ inline void OPEN(string s)
   freopen((s + ".out").c_str(), "w", stdout);
 #endif
 }
-void solve(int n)
-{
-  if (n == 1)
-    cout << 1 << endl;
-  else if (n < 4)
-    cout << "NO SOLUTION" << endl;
-  else if (n == 4)
-    cout << "2 4 1 3\n";
-  else
-  {
-    for (int i = 1; i <= n; i += 2)
-      cout << i << " ";
-    for (int i = 2; i <= n; i += 2)
-    {
-      if (i + 2 <= n)
-        cout << i << " ";
-      else
-        cout << i << endl;
-    }
+
+const int mxN = 2e5;
+int n , a[mxN], k;
+
+bool wordBrek(string s, vector<string> wordDict){
+  int memo [s.size()]; // -1 for null, 0 for false, 1 for true
+  
+  
+  cout << ans << endl;  
+}
+
+bool recursive(string s, int start_idx, set<string> dictionary, bool memo[]){
+  if(start_idx == s.size()) return true;
+  if(memo[start_idx] != -1){
+    return memo[start_idx];
+  }
+
+  for(int i = start_idx; i < s.size(); i++){
+    string word = s.substr(start_idx, )
   }
 }
-int main()
-{
-  ios_base::sync_with_stdio(0);
-  cin.tie(0);
-  cout.tie(0);
-  OPEN("TEST");
-  int n;
+
+
+void solve(){
+  string s;
+  cin >> s; 
   cin >> n;
+  vector<string> wordDict(n);
+  REP(i,n) {
+    cin >> wordDict[i];
+  };
   
-  solve(n);
+  
+  
+}
+
+int main(){
+  ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+  OPEN("TEST");
+  int T;
+  cin >> T;
+  FORN(t,1,T) {
+    cout << "Case #" << t << ": ";
+    solve();
+  };
   return 0;
 }
