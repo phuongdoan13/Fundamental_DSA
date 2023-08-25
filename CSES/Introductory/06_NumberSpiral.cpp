@@ -1,10 +1,4 @@
-
-#include algorithm
-#include <
-#include array
-#include vector
-#include <string>
-#include <iostream>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -111,58 +105,36 @@ inline void OPEN(string s)
   freopen((s + ".out").c_str(), "w", stdout);
 #endif
 }
-
-const int mxN = 2e5;
-int n , a[mxN], k;
-
-void wordBrek(string s, vector<string> wordDict){
-  int memo [s.size()]; // -1 for null, 0 for false, 1 for true
-  set<string> dictionary;
-  for(string word : wordDict){
-    dictionary.insert(word);
-  }
-  int ans = recursive(s, 0, dictionary, memo);
-  cout << (ans == 1 ? true : false) << endl;  
-}
-
-int recursive(string s, int start_idx, set<string> dictionary, int memo[]){
-  if(start_idx == s.size()) return true;
-  if(memo[start_idx] != -1){
-    return memo[start_idx];
-  }
-
-  for(int i = start_idx; i < s.size(); i++){
-    if(dictionary.find(s.substr(start_idx, i + 1))){
-      if(recursive(s, i + 1, dictionary, memo)){
-        memo[start_idx] = 1;
-        return memo[i] = 1;
+void solve(int n)
+{
+  if (n == 1)
+    cout << 1 << endl;
+  else if (n < 4)
+    cout << "NO SOLUTION" << endl;
+  else if (n == 4)
+    cout << "2 4 1 3\n";
+  else
+  {
+    for (int i = 1; i <= n; i += 2)
+      cout << i << " ";
+    for (int i = 2; i <= n; i += 2)
+    {
+      if (i + 2 <= n)
+        cout << i << " ";
+      else
+        cout << i << endl;
     }
   }
-  return memo[i] = 0;
 }
-
-
-void solve(){
-  string s;
-  cin >> s; 
-  cin >> n;
-  vector<string> wordDict(n);
-  REP(i,n) {
-    cin >> wordDict[i];
-  };
-  wordBrek(s, wordDict);
-  
-  
-}
-
-int main(){
-  ios_base::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+int main()
+{
+  ios_base::sync_with_stdio(0);
+  cin.tie(0);
+  cout.tie(0);
   OPEN("TEST");
-  int T;
-  cin >> T;
-  FORN(t,1,T) {
-    cout << "Case #" << t << ": ";
-    solve();
-  };
+  int n;
+  cin >> n;
+  
+  solve(n);
   return 0;
 }
