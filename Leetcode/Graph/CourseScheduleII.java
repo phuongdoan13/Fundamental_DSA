@@ -1,5 +1,6 @@
-
+package Leetcode.Graph;
 import java.util.*;
+
 public class CourseScheduleII{
   public int[] findOrder(int numCourses, int[][] prerequisites) {
       Map<Integer, List<Integer>> adj = new HashMap<>();
